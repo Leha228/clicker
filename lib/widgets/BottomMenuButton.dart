@@ -6,12 +6,12 @@ import '../screens/MainingScreen.dart';
 import '../screens/ProfileScreen.dart';
 import '../screens/ShopScreen.dart';
 
-class ButtonText {
+class BottomMenuButton {
 
   late String title;
   late IconData icon;
 
-  ButtonText(this.title, this.icon);
+  BottomMenuButton(this.title, this.icon);
 
   Expanded render() {
     return Expanded(
