@@ -1,11 +1,17 @@
 
+import 'package:clicker/screens/MainScreen.dart';
 import 'package:flutter/material.dart';
+
+import '../screens/MainingScreen.dart';
+import '../screens/ProfileScreen.dart';
+import '../screens/ShopScreen.dart';
 
 class ButtonText {
 
   late String title;
+  late IconData icon;
 
-  ButtonText(this.title);
+  ButtonText(this.title, this.icon);
 
   Expanded render() {
     return Expanded(
@@ -15,14 +21,25 @@ class ButtonText {
           style: TextButton.styleFrom(
             foregroundColor: Colors.blue,
           ),
-          onPressed: null,
+          onPressed: () => {
+            switch (title) {
+              "Home" => MainScreen().show(),
+              "Maining" => MainingScreen().show(),
+              "Shop" => ShopScreen().show(),
+              "Profile" => ProfileScreen().show(),
+              // TODO: Handle this case.
+              String() => throw UnimplementedError(),
+            }
+          },
           child: Column(
             children: [
+              Spacer(),
               Icon(
-                Icons.favorite,
+                icon,
                 color: Colors.white,
               ),
-              Text(title)
+              Text(title),
+              Spacer(),
             ],
           )
         ),
