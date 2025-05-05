@@ -1,3 +1,4 @@
+import 'package:clicker/widgets/ContainerRaduis.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/BottomMenu.dart';
@@ -8,23 +9,22 @@ class ProfileScreen {
   void show() {
     runApp(
       Container(
-        color: Colors.white,
+        color: Color(0xFF36324a),
         padding: EdgeInsets.only(top: 0),
         child: Column(
           children: [
             Expanded(
-              flex: 2,
+              flex: 1,
               child: Container(
-                color: Colors.amber,
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 0),
                 child: TopInfoCoinContainer().render(),
               ),
             ),
-            Expanded(flex: 9, child: Container(color: Colors.blue)),
+            Expanded(flex: 9, child: Container(margin: EdgeInsets.symmetric(horizontal: 10, vertical: 0),)),
             Expanded(
               flex: 1,
               child: Container(
-                color: Colors.red,
-                child: BottomMenu().render(),
+                child: ContainerRadius(BottomMenu().render()).render(),
               ),
             ),
           ],

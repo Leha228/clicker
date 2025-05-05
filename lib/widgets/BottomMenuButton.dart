@@ -19,7 +19,7 @@ class BottomMenuButton {
         textDirection: TextDirection.ltr,
         child: TextButton(
           style: TextButton.styleFrom(
-            foregroundColor: Colors.blue,
+            foregroundColor: Colors.white,
           ),
           onPressed: () => {
             switch (title) {
@@ -38,7 +38,7 @@ class BottomMenuButton {
                 icon,
                 color: Colors.white,
               ),
-              Text(title),
+              Text(title, style: TextStyle(color: Colors.white),),
               Spacer(),
             ],
           )

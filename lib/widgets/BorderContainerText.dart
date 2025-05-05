@@ -11,8 +11,8 @@ class BorderContainerText {
   Expanded render() {
     return Expanded(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 1, vertical: 10),
-        margin: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 1, vertical: 2),
+        margin: EdgeInsets.symmetric(horizontal: 5, vertical: 1),
         decoration: BoxDecoration(
           border: Border(
             top: BorderSide(color: Colors.black45),
